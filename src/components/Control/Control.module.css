@@ -1,0 +1,48 @@
+.control {
+    border: 1px dashed #0099ff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: move;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.scale {
+    position: absolute;
+    border: 1px solid #0099ff;
+    background-color: #ddd;
+    box-sizing: border-box;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+}
+
+.rotate {
+    position: absolute;
+    left: 50%;
+    bottom: -50px;
+    color: #0099ff;
+    border: 1px solid #0099ff;
+    background-color: #ddd;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    transform: translate(-50%, 0);
+    cursor: grab;
+}
+.rotate:active {
+    cursor: grabbing;
+}
+
+.control-selected {
+    border: 2px solid #0099ff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    user-select: none;
+    cursor: pointer;
+}
