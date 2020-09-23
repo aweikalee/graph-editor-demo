@@ -147,6 +147,11 @@ const CURSOR_MAP = [
     'w-resize',
     'nw-resize',
 ]
+
 function getCursor(index: number, rotate: number) {
-    return CURSOR_MAP[(index + Math.round(rotate / 45)) % 8]
+    let r = rotate
+    while (r < 0) {
+        r += 360
+    }
+    return CURSOR_MAP[((index + Math.round(r / 45)) % 8) % 8]
 }
